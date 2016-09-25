@@ -91,7 +91,7 @@ namespace g2o {
     // VertexSE2 *rob = static_cast<VertexSE2*>(_vertices[0]);
     VertexPointXY *point = static_cast<VertexPointXY*>(_vertices[1]);
 
-    Vector2D perr = cache->w2lMatrix() * point->estimate();
+    Vector2D perr = cache->w2nMatrix() * point->estimate();
 
     // error, which is backwards from the normal observed - calculated
     // _measurement is the measured projection
